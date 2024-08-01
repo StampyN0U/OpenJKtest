@@ -1958,11 +1958,11 @@ void ForceDrainDamage( gentity_t *self, gentity_t *traceEnt, vec3_t dir, vec3_t 
 					}
 					else if (modPowerLevel == 1)
 					{
-						dmg = 1;
+						dmg = 5;
 					}
 					else if (modPowerLevel == 2)
 					{
-						dmg = 2;
+						dmg = 10;
 					}
 				}
 				//G_Damage( traceEnt, self, self, dir, impactPoint, dmg, 0, MOD_FORCE_DARK );
