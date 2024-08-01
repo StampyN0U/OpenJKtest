@@ -1704,17 +1704,17 @@ void ForceLightningDamage( gentity_t *self, gentity_t *traceEnt, vec3_t dir, vec
 				{
 					if (!modPowerLevel)
 					{
-						dmg = 0;
+						dmg = 1;
 						traceEnt->client->noLightningTime = level.time + 400;
 					}
 					else if (modPowerLevel == 1)
 					{
-						dmg = 1;
+						dmg = 2;
 						traceEnt->client->noLightningTime = level.time + 300;
 					}
 					else if (modPowerLevel == 2)
 					{
-						dmg = 1;
+						dmg = 5;
 						traceEnt->client->noLightningTime = level.time + 100;
 					}
 				}
@@ -1723,7 +1723,7 @@ void ForceLightningDamage( gentity_t *self, gentity_t *traceEnt, vec3_t dir, vec
 					&& self->client->ps.fd.forcePowerLevel[FP_LIGHTNING] > FORCE_LEVEL_2 )
 				{//2-handed lightning
 					//jackin' 'em up, Palpatine-style
-					dmg *= 2;
+					dmg *= 10;
 				}
 
 				if (dmg)
